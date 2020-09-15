@@ -31,14 +31,7 @@ int main()
         {
             auto curr = a.back() - '0' + b.back() - '0';
             sol = to_string((curr + add1) % 10) + sol;
-            if (curr + add1 > 9)
-            {
-                add1 = true;
-            }
-            else
-            {
-                add1 = false;
-            }
+            add1 = (curr + add1 > 9);
             a.pop_back();
             b.pop_back();
         }
