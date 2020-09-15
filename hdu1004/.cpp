@@ -5,7 +5,7 @@ using namespace std;
 int n;
 string color;
 map<string, int> balloon;
-using tp = decltype(balloon)::value_type;
+using tp = const decltype(balloon)::value_type &;
 int main()
 {
     while (cin >> n && n)
@@ -16,7 +16,7 @@ int main()
             cin >> color;
             balloon[color]++;
         }
-        cout << max_element(all(balloon), [](const tp &p1, const tp &p2) { return p1.second < p2.second; })->first
+        cout << max_element(all(balloon), [](tp p1, tp p2) { return p1.second < p2.second; })->first
              << endl;
     }
     return 0;
