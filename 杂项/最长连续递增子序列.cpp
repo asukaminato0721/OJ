@@ -6,7 +6,7 @@ int main()
     vector<int> a = {1, 2, 3, 4, 5, 6, 7, 8, 7, 4, 3, 5, 7, 85, 4};
     vector<int> sol;
     sol.push_back(a.front());
-    size_t maxl = 0;
+    size_t maxl = 1;
     for (auto &&i : a)
     {
         if (sol.back() < i)
