@@ -11,11 +11,8 @@ int main()
     while (cin >> n && n)
     {
         balloon.clear();
-        while (n--)
-        {
-            cin >> color;
-            balloon[color]++;
-        }
+        for (; n; cin >> color, balloon[color]++, n--)
+            ;
         cout << max_element(all(balloon), [](tp p1, tp p2) { return p1.second < p2.second; })->first
              << endl;
     }
