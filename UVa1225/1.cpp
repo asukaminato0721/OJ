@@ -18,9 +18,9 @@ int main()
                 sol[j]++;
             }
         }
-        for (size_t i = 0; i < 9; i++)
+        for (size_t i = '0'; i < '9'; i++)
         {
-            cout << sol[to_string(i)[0]] << " ";
+            cout << sol[i] << " ";
         }
         cout << sol['9'] << endl;
     }
