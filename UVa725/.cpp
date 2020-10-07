@@ -1,5 +1,6 @@
 #pragma GCC optimize(3, "Ofast", "inline")
 #include <bits/stdc++.h>
+#define all(x) (x).begin(), (x).end()
 using namespace std;
 int cnt = 0;
 set<char> sol;
@@ -14,7 +15,7 @@ int main()
         }
         cnt++;
         bool has_sol = false;
-        for (size_t i = 1234; i < (100000 / n + 1); i++)
+        for (size_t i = 1234; i < 100000 / n + 1; i++)
         {
             sol.clear();
             string tmp = to_string(i);
@@ -22,10 +23,8 @@ int main()
             {
                 tmp += "0";
             }
-            for (auto &&j : tmp + to_string(i * n))
-            {
-                sol.insert(j);
-            }
+            tmp += to_string(i * n);
+            sol.insert(all(tmp));
             if (sol.size() == 10)
             {
                 printf("%d / %05d = %d\n", i * n, i, n);
