@@ -1,12 +1,11 @@
-cnt = 0
+from itertools import count
 sol = set()
-while True:
+for cnt in count():
     n = int(input())
     if n == 0:
         break
-    if cnt > 0:
+    if cnt:
         print()
-    cnt += 1
     有解 = False
     for i in range(1234, 10_0000//n+1):
         sol.clear()
