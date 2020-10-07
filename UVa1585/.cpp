@@ -2,7 +2,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define all(x) (x).begin(), (x).end()
-vector<int> sol;
 string tmp, line;
 int main()
 {
@@ -10,15 +9,15 @@ int main()
     cin >> T;
     while (T--)
     {
-        sol.clear();
         cin >> line;
         replace(all(line), 'X', ' ');
         stringstream ss(line);
+        int s = 0;
         while (ss >> tmp)
         {
-            sol.push_back(tmp.length() * (tmp.length() + 1) / 2);
+            s += (tmp.length() * (tmp.length() + 1) / 2);
         }
-        cout << accumulate(all(sol), 0) << endl;
+        cout << s << endl;
     }
     return 0;
 }
