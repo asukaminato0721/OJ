@@ -6,6 +6,5 @@ for _ in range(n):
     print('\n' if _ else '', end='')
     case = list(zip(*([int(i) for i in input().split()]
                       for i in range(T))))
-    line12 = [i+j for i in case[0] for j in case[1]]
-    line34 = Counter([i+j for i in case[2] for j in case[3]])
-    print(sum(line34[-i] for i in line12))
+    line12 = Counter([i+j for i in case[0] for j in case[1]])
+    print(sum(line12[-c-d] for c in case[2] for d in case[3]))
