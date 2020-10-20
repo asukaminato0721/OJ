@@ -11,7 +11,7 @@ def solve(line):
         elif i == ')':
             (b0, b1), (a0, a1) = stack.pop(), stack.pop()
             if a1 != b0:
-                return -1
+                return 'error'
             s += a0*a1*b1
             stack.append((a0, b1))
     return s
@@ -19,7 +19,6 @@ def solve(line):
 
 while True:
     try:
-        tmp = solve(input())
-        print(tmp if tmp != -1 else 'error')
+        print(solve(input()))
     except EOFError:
         break
