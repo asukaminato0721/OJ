@@ -10,6 +10,6 @@ B = deque(map(int, input().split()), maxlen=nb)
 for i in range(n):
     sa += int((A[0], B[0]) in win)
     sb += int((B[0], A[0]) in win)
-    A.append(A.popleft())
-    B.append(B.popleft())
+    A.rotate(-1)
+    B.rotate(-1)
 print(sa, sb)
