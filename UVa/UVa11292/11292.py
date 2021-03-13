@@ -1,4 +1,5 @@
 from collections import deque
+
 while True:
     n, m = [int(i) for i in input().split()]
     if n == 0 and m == 0:

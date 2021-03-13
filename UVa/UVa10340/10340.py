@@ -5,9 +5,9 @@ while True:
             if s[0] == i:
                 s = s[1:]
             if len(s) == 0:
-                print('Yes')
+                print("Yes")
                 break
         else:
-            print('No')
+            print("No")
     except EOFError:
         break

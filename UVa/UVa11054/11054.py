@@ -1,5 +1,6 @@
 from itertools import accumulate, islice
 from operator import add
+
 while True:
     try:
         n = int(input())

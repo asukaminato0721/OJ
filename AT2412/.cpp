@@ -6,8 +6,7 @@ int main()
 {
     int n, k;
     cin >> n >> k;
-    int ai;
-    for (; n; scanf("%d", &ai), a.push_back(ai), n--)
+    for (int ai; n; scanf("%d", &ai), a.push_back(ai), n--)
         ;
     vector<int> b;
     partial_sum(a.begin(), a.end(), back_inserter(b));

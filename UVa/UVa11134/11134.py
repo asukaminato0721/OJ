@@ -1,5 +1,5 @@
-from operator import itemgetter
 from functools import partial
+from operator import itemgetter
 
 sort = partial(sorted, key=itemgetter(2, 1))
 

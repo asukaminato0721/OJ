@@ -1,4 +1,5 @@
 from queue import PriorityQueue
+
 word = set()
 res = PriorityQueue()
 while True:
@@ -12,4 +13,4 @@ for i in word:
             res.put(i)
             break
 while not res.empty():
-    print(res.get(0))
+    print(res.get())

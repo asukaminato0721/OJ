@@ -1,4 +1,5 @@
 from collections import defaultdict
+
 people = defaultdict(int)
 while True:
     n = int(input())
@@ -12,6 +13,6 @@ while True:
         else:
             people[k] += 1
     if all(j == 0 for j in people.values()):
-        print('YES')
+        print("YES")
     else:
-        print('NO')
+        print("NO")

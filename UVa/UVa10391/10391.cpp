@@ -4,8 +4,7 @@ using namespace std;
 set<string> dict;
 int main()
 {
-    string word;
-    for (; cin >> word; dict.insert(word))
+    for (string word; cin >> word; dict.insert(word))
         ;
     for (auto &&i : dict)
     {

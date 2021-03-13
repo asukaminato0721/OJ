@@ -18,4 +18,4 @@ def f(k: int, i: int) -> int:
 T = int(input())
 for _ in range(T):
     k, a, b = map(int, input().split())
-    print("Case %d: %d" % (_ + 1, f(k, b) - f(k, a - 1)))
+    print(f"Case {_ + 1}: {f(k, b) - f(k, a - 1)}")

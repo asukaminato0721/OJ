@@ -7,6 +7,6 @@ def sol():
 
 while True:
     try:
-        print('YES' if sol() == sol() else 'NO')
+        print("YES" if sol() == sol() else "NO")
     except EOFError:
         break

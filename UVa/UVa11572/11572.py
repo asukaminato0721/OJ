@@ -7,7 +7,7 @@ for _ in range(T):
     while pr < N:
         if snow[pr] not in dup:
             dup.add(snow[pr])
-            ans = max(ans, pr-pl+1)
+            ans = max(ans, pr - pl + 1)
         else:
             while pl < pr and snow[pl] != snow[pr]:
                 dup.remove(snow[pl])

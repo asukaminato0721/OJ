@@ -1,8 +1,11 @@
 from collections import deque
+
+# fmt:off
 win = {
     (0, 2), (0, 3),
     (1, 3), (2, 4),
     (3, 4), (1, 0), (2, 1), (3, 2), (4, 0), (4, 1)}
+# fmt:on
 n, na, nb = map(int, input().split())
 sa, sb = 0, 0
 A = deque(map(int, input().split()), maxlen=na)
