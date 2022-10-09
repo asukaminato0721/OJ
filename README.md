@@ -1,12 +1,12 @@
 # OJ
 Some OJ Code
 
-Try to write Pure **C++11** code.
+Try to write ~~Pure **C++11**~~ Rust code.
 
 ---
 
-UVa 好工具:
+UVa good tools:
 
-- [在线运行 Python 3.5.1 代码](https://www.jdoodle.com/python3-programming-online/)
+- [run Python 3.5.1 code online](https://www.jdoodle.com/python3-programming-online/)
 - [udebug](https://udebug.com/UVa/)
 - [vjudge](https://vjudge.net/problem/)
