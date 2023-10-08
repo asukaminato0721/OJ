@@ -1,4 +1,3 @@
-#pragma GCC optimize(3, "Ofast", "inline")
 #include <bits/stdc++.h>
 using namespace std;
 int main()
