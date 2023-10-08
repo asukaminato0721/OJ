@@ -1,23 +1,21 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <algorithm>
+#include <iostream>
+#include <string>
+
 #define all(x) (x).begin(), (x).end()
-int main()
-{
-    int T, n;
-    cin >> T;
-    while (T--)
-    {
-        cin >> n;
-        string str;
-        for (size_t i = 1; i <= n; i++)
-        {
-            str += to_string(i);
+int main() {
+        int T, n;
+        std::cin >> T;
+        while (T--) {
+                std::cin >> n;
+                auto str = std::string{};
+                for (auto i = 1; i <= n; i++) {
+                        str += std::to_string(i);
+                }
+                for (auto i = '0'; i < '9'; i++) {
+                        std::cout << std::count(all(str), i) << " ";
+                }
+                std::cout << std::count(all(str), '9') << std::endl;
         }
-        for (size_t i = '0'; i < '9'; i++)
-        {
-            cout << count(all(str), i) << " ";
-        }
-        cout << count(all(str), '9') << endl;
-    }
-    return 0;
+        return 0;
 }
