@@ -1,22 +1,21 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <algorithm>
+#include <cstdint>
+#include <iostream>
+#include <sstream>
 #define all(x) (x).begin(), (x).end()
-string tmp, line;
-int main()
-{
-    int T;
-    cin >> T;
-    while (T--)
-    {
-        cin >> line;
-        replace(all(line), 'X', ' ');
-        stringstream ss(line);
-        int s = 0;
-        while (ss >> tmp)
-        {
-            s += (tmp.length() * (tmp.length() + 1) / 2);
+std::string tmp, line;
+int main() {
+        int T;
+        std::cin >> T;
+        while (T--) {
+                std::cin >> line;
+                std::replace(all(line), 'X', ' ');
+                auto ss = std::stringstream{line};
+                auto s = 0;
+                while (ss >> tmp) {
+                        s += (tmp.length() * (tmp.length() + 1) / 2);
+                }
+                std::cout << s << std::endl;
         }
-        cout << s << endl;
-    }
-    return 0;
+        return 0;
 }
